@@ -1,0 +1,25 @@
+public class Driver {
+
+    public static WebDriver driver=null;
+
+
+
+    public static WebDriver startdriver(String browser){
+
+
+        if(browser.equalsIgnoreCase("Chrome")){
+
+        System.setProperty("webdriver.chrome.driver", "/home/vicky/Documents/Jars/chromedriver");
+
+        driver=new ChromeDriver();
+
+        }else if(browser.equals("Firefox")){
+
+        driver=new FirefoxDriver();
+
+        }
+        return driver;
+
+        }
+
+    }
